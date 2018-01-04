@@ -11,6 +11,7 @@
         }
     ],
     "require-dev": {
+        "satooshi/php-coveralls": "^2.0.0",
         "squizlabs/php_codesniffer": "^3.0.0"
     }
 }
