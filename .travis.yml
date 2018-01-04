@@ -1,0 +1,6 @@
+language: generic
+
+sudo: false
+
+script:
+  - xmllint --noout ruleset.xml
