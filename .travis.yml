@@ -9,16 +9,16 @@ cache:
 php:
   - 7.2
 
-addons:
-  apt:
-    packages:
-      - libxml2-utils
+matrix:
+  include:
+    - php: 7.2
+      addons:
+        apt:
+          packages:
+            - libxml2-utils
 
 before_script:
   - composer install --no-interaction
 
 script:
   - xmllint --noout ruleset.xml
-
-after_success:
-  - vendor/bin/php-coveralls -v
